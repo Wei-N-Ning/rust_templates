@@ -1,2 +1,4 @@
-# rust_templates
-Rust Project Templates (cli, service, library, etc.)
+# Rust Project Templates
+
+A little opinionated project templates.
+
