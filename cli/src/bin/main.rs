@@ -1,6 +1,9 @@
 use clap::Parser;
 use lib_cli::mainlib;
 
+// reference
+// https://github.com/clap-rs/clap
+
 /// Simple program to greet a person
 #[derive(Parser, Debug)]
 #[clap(author, version, about, long_about = None)]
