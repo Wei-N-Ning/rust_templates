@@ -1,5 +1,6 @@
 use assert_cmd::prelude::*; // Add methods on commands
 use predicates::prelude::*; // Used for writing assertions
+use std::path::PathBuf;
 use std::process::Command; // Run programs
 
 // reference
@@ -19,5 +20,19 @@ fn expect_success_and_output() -> Result<(), Box<dyn std::error::Error>> {
     cmd.assert()
         .success()
         .stdout(predicate::str::contains("Hello"));
+    Ok(())
+}
+
+#[test]
+fn read_testdata_file() -> Result<(), Box<dyn std::error::Error>> {
+    let filename: PathBuf = [env!("CARGO_MANIFEST_DIR"), "testdata", "foo.txt"]
+        .iter()
+        .collect();
+    let s = std::fs::read_to_string(&filename)?;
+    let mut cmd = Command::cargo_bin("cli")?;
+    cmd.arg("--name").arg(s);
+    cmd.assert()
+        .success()
+        .stdout(predicate::str::contains("Hello foo"));
     Ok(())
 }
