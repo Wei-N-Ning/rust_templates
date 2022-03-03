@@ -1,8 +1,32 @@
 [package]
 name = "service"
-version = "0.1.0"
+version = "0.0.1"
 edition = "2021"
+authors = [ "addyourname@here.com" ]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+tokio = { version = "1", features = [ "full" ] }
+anyhow = "1"
+thiserror = "1"
+
+[dev-dependencies]
+
+[[bin]]
+name = "service"
+path = "src/bin/main.rs"
+
+[lib]
+name = "lib_cli"
+path = "src/lib/lib.rs"
+test = true
+doctest = false
+bench = false
+doc = true
+plugin = false
+proc-macro = false
+harness = true
+edition = "2021"
+crate-type = ["rlib"]
+required-features = []
