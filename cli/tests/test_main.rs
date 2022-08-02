@@ -1,3 +1,5 @@
+// TODO: replace this file with the real CLI integration tests
+
 use assert_cmd::prelude::*; // Add methods on commands
 use predicates::prelude::*; // Used for writing assertions
 use std::path::PathBuf;

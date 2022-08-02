@@ -1,8 +1,8 @@
 [package]
-name = "cli"
-version = "0.0.1"
+name = "your_cli_project_name" # TODO: replace it with your project name
+version = "0.0.1" # TODO: replace it with your project name
 edition = "2021"
-authors = [ "addyourname@here.com" ]
+authors = [ "add_your_name@here.com" ] # TODO: replace it with your email address
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
@@ -16,11 +16,11 @@ assert_cmd = "2"
 predicates = "2"
 
 [[bin]]
-name = "cli"
+name = "cli" # TODO: replace it with your executable name
 path = "src/bin/main.rs"
 
 [lib]
-name = "lib_cli"
+name = "lib_cli" # TODO: replace it with your library name
 path = "src/lib/lib.rs"
 test = true
 doctest = false

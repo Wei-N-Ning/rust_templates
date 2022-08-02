@@ -1,3 +1,5 @@
+// TODO: remove this module
+
 pub fn add(x: i32, y: i32) -> i32 {
     add_impl(x, y)
 }

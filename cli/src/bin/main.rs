@@ -1,5 +1,5 @@
 use clap::Parser;
-use lib_cli::mainlib;
+use lib_cli::prelude::*; // TODO: replace it with your library
 
 // reference
 // https://github.com/clap-rs/clap
@@ -21,6 +21,6 @@ fn main() {
     let args = Args::parse();
 
     for _ in 0..args.count {
-        println!("Hello {}, {}", args.name, mainlib::add(1, 2))
+        println!("Hello {}, {}", args.name, add(1, 2))
     }
 }

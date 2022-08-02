@@ -1,3 +1,5 @@
+// TODO: replace these tests with the real benchmarking tests
+
 #![feature(test)]
 extern crate test;
 use test::Bencher;
